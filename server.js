@@ -44,6 +44,20 @@ api.put('/cliente/update/cpfcnpj/12345678901', (req, res) => {
     res.json(response)
 })
 
+// Deleta um cliente por cpf
+api.delete('/cliente/delete/cpfcnpj/12345678901', (req, res) => {
+
+    const response = [
+        {
+            mensagem: 'Cliente deletado com sucesso',
+            status: 201
+        }
+    ]
+
+    res.status(201)
+    res.json(response)
+})
+
 api.listen(porta, () => {
     console.log(`Servidor em execução na porta: ${porta}`)
 })
