@@ -30,6 +30,20 @@ api.post('/cliente/novo', (req, res) => {
     res.json(response)
 })
 
+// Atualiza cliente por cpf
+api.put('/cliente/update/cpfcnpj/12345678901', (req, res) => {
+
+    const response = [
+        {
+            mensagem: 'Dados atualizados com sucesso',
+            status: 200
+        }
+    ]
+
+    res.status(200)
+    res.json(response)
+})
+
 api.listen(porta, () => {
     console.log(`Servidor em execução na porta: ${porta}`)
 })
